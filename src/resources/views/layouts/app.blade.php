@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')mogitate</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <span class="navbar-brand">mogitate</span>
+            <a href="{{ route('products.index') }}" class="navbar-brand">mogitate</a>
         </div>
     </nav>
 

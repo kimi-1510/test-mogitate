@@ -5,7 +5,13 @@
 
 <div class="products-container">
     <div class="page-header">
-        <h2 class="page-title">商品一覧</h2>
+        <h2 class="page-title">
+            @if(request('search'))
+                "{{ request('search') }}"の商品一覧
+            @else
+                商品一覧
+            @endif
+        </h2>
         <a href="{{ route('products.create') }}" class="add-product-btn">+ 商品を追加</a>
     </div>
 
