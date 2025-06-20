@@ -37,6 +37,7 @@
 
 .add-product-btn:hover {
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background-color: #de9426;
 }
 
 /* メインコンテンツ */
@@ -91,6 +92,7 @@
 }
 .search-btn:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  background-color:#deb500;
 }
 
 
@@ -160,7 +162,7 @@
 }
 .sort-badge {
   display: inline-block;
-  background: #fff;
+  background: #f7f7f7;
   color: #4a4a4a;
   border-radius: 12px;
   border: 1px solid #f5c800;

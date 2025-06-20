@@ -21,9 +21,7 @@ class Product extends Model
         'description',
     ];
 
-    /**
-     * 商品と季節の関連付け
-     */
+    // 商品と季節の関連付け
     public function seasons()
     {
         return $this->belongsToMany(Season::class, 'product_season');

@@ -18,9 +18,14 @@ Route::get('/', function () {
     return redirect()->route('products.index');
 });
 
-// 商品関連のルーティング
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+// 静的なパスを先に定義
 Route::get('/products/register', [ProductController::class, 'create'])->name('products.create');
-Route::get('/products/{id}/update', [ProductController::class, 'edit'])->name('products.edit');
-Route::delete('/products/{id}/delete', [ProductController::class, 'destroy'])->name('products.destroy');
+Route::post('/products/register', [ProductController::class, 'store'])->name('products.store');
+Route::get('/products/search', [ProductController::class, 'search'])->name('products.search');
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+// パラメータを伴うルートは後に定義
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+Route::put('/products/{id}/update', [ProductController::class, 'update'])->name('products.update');
+Route::delete('/products/{id}/delete', [ProductController::class, 'delete'])->name('products.delete');
+

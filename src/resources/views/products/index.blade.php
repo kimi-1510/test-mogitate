@@ -18,15 +18,15 @@
     <div class="content-wrapper">
         <div class="sidebar">
             <div class="search-card">
-                <!-- 検索フォーム -->
+            <!-- 検索フォーム -->
                 <form action="{{ route('products.index') }}" method="GET" class="search-form">
                     <div class="search-input-wrap">
                         <input type="text" name="search" class="search-input" placeholder="商品名で検索" value="{{ $search ?? '' }}">
-                    </div>
+                        </div>
                     <button type="submit" class="search-btn">検索</button>
-                </form>
+                    </form>
 
-                <!-- 並び替えドロップダウン -->
+                    <!-- 並び替えドロップダウン -->
                 <div class="sort-section">
                     <h6 class="sort-title">価格順で表示</h6>
                     <div class="custom-dropdown">
@@ -35,20 +35,20 @@
                             <a class="dropdown-item" href="{{ request()->fullUrlWithQuery(['sort' => 'high']) }}">高い順に表示</a>
                             <a class="dropdown-item" href="{{ request()->fullUrlWithQuery(['sort' => 'low']) }}">低い順に表示</a>
                         </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- 並び替えタグ -->
-                @if(isset($sort))
+                    <!-- 並び替えタグ -->
+                    @if(isset($sort))
                     <div class="sort-badge-wrap">
                         <span class="sort-badge">
-                            {{ $sort === 'high' ? '高い順に表示' : '低い順に表示' }}
+                                {{ $sort === 'high' ? '高い順に表示' : '低い順に表示' }}
                             <a href="{{ request()->fullUrlWithQuery(['sort' => null]) }}" class="sort-badge-close">×</a>
-                        </span>
-                    </div>
-                @endif
+                            </span>
+                        </div>
+                    @endif
+                </div>
             </div>
-        </div>
 
         <div class="main-content">
             <div class="products-list">
@@ -57,7 +57,7 @@
                         <a href="{{ route('products.show', $product->id) }}" class="product-link">
                             <div class="product-image-wrap">
                                 <img src="{{ asset('storage/img/' . $product->image) }}" class="product-image" alt="{{ $product->name }}">
-                            </div>
+                                </div>
                             <div class="product-info">
                                 <h5 class="product-title">{{ $product->name }}</h5>
                                 <h5 class="product-price">¥{{ number_format($product->price) }}</h5>
