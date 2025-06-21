@@ -48,8 +48,8 @@ php artisan db:seed
 
 ## 使用技術（実行環境）
 -   PHP 8.4.5
--   Laravel8.83.29
--   MySQL8.0.26
+-   Laravel 8.83.29
+-   MySQL 8.0.26
 
 
 ## ER図
