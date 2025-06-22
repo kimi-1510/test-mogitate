@@ -45,6 +45,12 @@ php artisan migrate
 php artisan db:seed
 ```
 
+-   ストレージと公開ディレクトリをリンクする
+
+```
+php artisan storage:link
+```
+
 
 ## 使用技術（実行環境）
 -   PHP 8.4.5
