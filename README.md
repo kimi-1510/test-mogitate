@@ -59,7 +59,7 @@ php artisan storage:link
 
 
 ## ER図
-![Image](./mogitate.svg)
+![Image](https://github.com/user-attachments/assets/adabc958-5283-47a3-8a6e-cd483b09f620)
 
 ## URL
 
